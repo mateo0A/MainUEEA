@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Dinámico y Colorido</title>
+</head>
+<body>
+    <section class="contain-flex">
+        <h2>🎨 Display Flex Dinámico</h2>
+        
+        <aside class="justify">
+            <p class="subtitle">🚀 justify-content="start"</p>
+            <div class="example1">
+                <canvas></canvas>
+                <canvas></canvas>
+                <canvas></canvas>
+                <canvas></canvas>
+            </div>
+
+            <p class="subtitle">🎯 justify-content="end"</p>
+            <div class="example2">
+                <canvas></canvas>
+                <canvas></canvas>
+                <canvas></canvas>
+                <canvas></canvas>
+            </div>
+
+            <p class="subtitle">⭐ justify-content="center"</p>
+            <div class="example3">
+                <canvas></canvas>
+                <canvas></canvas>
+                <canvas></canvas>
+                <canvas></canvas>
+            </div>
+
+            <p class="subtitle">🌈 justify-content="space-evenly"</p>
+            <div class="example4">
+                <canvas></canvas>
+                <canvas></canvas>
+                <canvas></canvas>
+                <canvas></canvas>
+            </div>
+
+            <p class="subtitle">🎪 justify-content="space-around"</p>
+            <div class="example5">
+                <canvas></canvas>
+                <canvas></canvas>
+                <canvas></canvas>
+                <canvas></canvas>
+            </div>
+
+            <p class="subtitle">🎭 justify-content="space-between"</p>
+            <div class="example6">
+                <canvas></canvas>
+                <canvas></canvas>
+                <canvas></canvas>
+                <canvas></canvas>
+            </div>
+
+            <hr>
+
+            <div class="gap-section">
+                <h2 class="gap-title">✨ Gap Properties</h2>
+                
+                <p class="subtitle">🔥 justify-content="start" + gap:10px</p>
+                <div class="example1 expm1">
+                    <canvas></canvas>
+                    <canvas></canvas>
+                    <canvas></canvas>
+                    <canvas></canvas>
+                </div>
+
+                <p class="subtitle">💫 justify-content="end" + gap:10%</p>
+                <div class="example2 expm2">
+                    <canvas></canvas>
+                    <canvas></canvas>
+                    <canvas></canvas>
+                    <canvas></canvas>
+                </div>
+
+                <p class="subtitle">🌟 justify-content="center" + gap:1em</p>
+                <div class="example3 expm3">
+                    <canvas></canvas>
+                    <canvas></canvas>
+                    <canvas></canvas>
+                    <canvas></canvas>
+                </div>
+
+                <p class="subtitle">🎨 justify-content="center" + gap:1rem</p>
+                <div class="example3 expm4">
+                    <canvas></canvas>
+                    <canvas></canvas>
+                    <canvas></canvas>
+                    <canvas></canvas>
+                </div>
+            </div>
+        </aside>
+    </section>
+
+    <script>
+        // Crear partículas flotantes
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 8 + 's';
+            particle.style.animationDuration = (Math.random() * 3 + 5) + 's';
+            document.body.appendChild(particle);
+
+            setTimeout(() => {
+                particle.remove();
+            }, 8000);
+        }
+
+        // Generar partículas continuamente
+        setInterval(createParticle, 300);
+
+        // Efecto hover mejorado para los canvas
+        document.querySelectorAll('canvas').forEach(canvas => {
+            canvas.addEventListener('mouseenter', function() {
+                this.style.animationPlayState = 'paused';
+            });
+            
+            canvas.addEventListener('mouseleave', function() {
+                this.style.animationPlayState = 'running';
+            });
+        });
+
+        // Efecto de clic en los canvas
+        document.querySelectorAll('canvas').forEach(canvas => {
+            canvas.addEventListener('click', function() {
+                this.style.animation = 'none';
+                this.style.transform = 'scale(1.5) rotate(720deg)';
+                this.style.transition = 'all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+                
+                setTimeout(() => {
+                    this.style.animation = 'rotateColors 4s linear infinite';
+                    this.style.transform = '';
+                    this.style.transition = 'all 0.3s ease';
+                }, 600);
+            });
+        });
+    </script>
+</body>
+</html>
