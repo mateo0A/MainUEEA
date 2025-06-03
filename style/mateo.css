@@ -1,149 +1,92 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  --main-bg: #2d0036;
-  --main-accent: #7c3aed;
-  --main-accent-light: #a78bfa;
-  --main-accent-dark: #4c1d95;
-  --main-surface: #f3e8ff;
-  --main-border: #c4b5fd;
+*{
+    color-scheme: light dark;
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: sans-serif;
 }
 body{
-    min-height: 100vh;
     display: flex;
+    min-height: 100vh;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    flex-direction: column;
-    background-color: var(--main-bg);
+    background: linear-gradient(#2c0425 90%,#000);
 }
 section{
-    background: linear-gradient(135deg, var(--main-accent-dark) 0%, var(--main-accent) 100%);
-    width: 100%;
-    height: auto;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    gap: 5em;
-}
-
-canvas{
-    width: 50px;
-    height: 50px;
-    background: var(--main-surface);
-    border: 2px solid var(--main-border);
-    box-shadow: 0 2px 8px 0 var(--main-accent-dark);
-}
-.justifi-content{
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    gap: 5rem;
 }
-.justifi-content div{
-    width: 100%;
-    position: relative;
-}
-.justifi-content div p{
-    position: absolute;
-    left: 0;
-    top: -55%;
-    font-weight: bold;
-}
-.example1, .example2, .example3, .example4, .example5, .example6,
-.grid1, .grid2, .grid3, .grid4, .grid5 {
-    display: flex;
-    gap: 1em;
-    margin-bottom: 1em;
-    background: linear-gradient(120deg, var(--main-accent-light) 60%, var(--main-accent) 100%);
-    padding: 1em;
-    border-radius: 8px;
-    align-items: center;
-
-    border: 1.5px solid var(--main-border);
-}
-
-/***** GRID EXAMPLES *****/
 div{
-    border: 1px solid;
+    border: 1px solid ;
+    width: 80%;
+    height: auto;
+    padding: 10px;
     border-radius: 10px;
+}
+aside{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+canvas{
+    width: 30px;
+    height: 30px;
+    background: #ddd;
+    border: 1px solid #197e68;
+    border-radius: 5px;
+}
+.contain-flex{
+    height: auto;
+    min-width: 80%;
+    max-width: 80%;
+    background: #792979a2;
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    
+
+}
+.example1{
+    display: flex;
+    justify-content: start;
+}
+.example2{
+    display: flex;
+    justify-content: end;
+}
+.example3{
+    display: flex;
+    justify-content: center;
+}
+.example4{
+    display: flex;
+    justify-content: space-evenly;
+}
+.example5{
+    display: flex;
+    justify-content: space-around;
+}
+.example6{
+    display: flex;
+    justify-content: space-between;
 }
 
 
-.contain-grid {
-    margin-top: 3em;
-    width: 90vw;
-    max-width: 900px;
-    background: linear-gradient(135deg, var(--main-accent) 0%, var(--main-accent-light) 100%);
-    border-radius: 10px;
-    padding: 2em 1em;
+.expm1{
+    gap: 10px;
 }
-.grid-examples > div {
-    margin-bottom: 2em;
+.expm2{
+    gap: 10%;
 }
-.grid1 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+.expm3{
     gap: 1em;
-    background: #3332;
-    padding: 1em;
-    border-radius: 8px;
 }
-.grid2 {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 1em;
-    background: #3332;
-    padding: 1em;
-    border-radius: 8px;
-}
-.grid3 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2em;
-    background: #3332;
-    padding: 1em;
-    border-radius: 8px;
-}
-.grid4 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1em;
-    background: #3332;
-    padding: 1em;
-    border-radius: 8px;
-}
-.grid5 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-    gap: 1em;
-    background: #3332;
-    padding: 1em;
-    border-radius: 8px;
-}
-.grid4 canvas:first-child {
-    grid-column: span 2;
-}
-@media (max-width: 700px) {
-    .contain-grid, .justifi-content { width: 98vw; }
-    .grid1, .grid2, .grid3, .grid4, .grid5 {
-        grid-template-columns: repeat(2, 1fr) !important;
-    }
-    .example1, .example2, .example3, .example4, .example5, .example6 {
-        flex-wrap: wrap;
-    }
+.expm4{
+    gap: 1rem;
 }
