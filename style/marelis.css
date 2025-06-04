@@ -1,0 +1,86 @@
+body{
+    display: flex;
+    background: rgb(16, 73, 10);
+    min-height: 100vh;
+    justify-content: center;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+div{
+    border: 1px solid ;
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+hr{
+    background-color: rgb(21, 95, 50);
+    border-color: #7eb879;
+}
+.container{
+    min-height: 200vh;
+    min-width: 80%;
+    max-width: 80%;
+    background: #7eb879;
+    position: absolute;
+    inset: 0;
+    margin: 10px auto 0 auto;
+    padding: 20px;
+    border-radius: 5%;
+}
+
+.c11{
+    display: inline-flex;
+    flex-direction: row;
+    border: 1px solid ;
+    width: 1%;
+    height: auto;
+    padding: 12px;
+    border-radius: 5px;
+    background: wheat;
+}
+.c1{
+    display: flex;
+    justify-content: start;
+}
+.c2{
+    display: flex;
+    justify-content: end;
+}
+.c3{
+    display: flex;
+    justify-content: center;
+}
+.c4{
+    display: flex;
+    justify-content: space-evenly;
+}
+.c5{
+    display: flex;
+    justify-content: space-around;
+}
+.c6{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.c111{
+    gap: 10px;
+}
+.c22{
+    gap: 10%;
+}
+.c33{
+    gap: 1em;
+}
+.c44{
+    gap: 1rem;
+}
